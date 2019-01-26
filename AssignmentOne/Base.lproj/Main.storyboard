@@ -70,27 +70,53 @@
                                 <rect key="frame" x="224" y="757" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="bet100Button"/>
+                                <connections>
+                                    <action selector="bet100:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZP-fE-l8m"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvO-oy-Yvu" userLabel="bet10Button">
                                 <rect key="frame" x="170" y="757" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="bet10Button"/>
+                                <connections>
+                                    <action selector="bet10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QMG-hw-jvv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6f-lr-TGZ" userLabel="betOneButton">
                                 <rect key="frame" x="113" y="757" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="bet1Button"/>
+                                <connections>
+                                    <action selector="bet1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kyI-Fb-Mz4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKo-lM-9W4" userLabel="spinButton">
                                 <rect key="frame" x="335" y="757" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="spinButton"/>
+                                <connections>
+                                    <action selector="spinBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Two-Dr-B5E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFD-LJ-7Zv" userLabel="betMaxButton">
                                 <rect key="frame" x="281" y="757" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="betMaxButton"/>
+                                <connections>
+                                    <action selector="betMax:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BLS-y8-bfK"/>
+                                </connections>
                             </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1b7-aI-iVz" userLabel="betStepper">
+                                <rect key="frame" x="160" y="710" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="betPlusMinus:" destination="BYZ-38-t0r" eventType="valueChanged" id="cJj-6v-cdt"/>
+                                </connections>
+                            </stepper>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhx-LD-9Q0" userLabel="1Picker View">
+                                <rect key="frame" x="84" y="306" width="248" height="254"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -101,6 +127,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="betAmount" destination="lvi-Pc-DxN" id="aPu-Wz-7pG"/>
+                        <outlet property="betMax" destination="IFD-LJ-7Zv" id="cmA-jz-RNh"/>
+                        <outlet property="credit" destination="6Q8-um-2W8" id="TW0-6g-Ibb"/>
+                        <outlet property="slotSpinner" destination="nhx-LD-9Q0" id="JA9-sh-X9P"/>
+                        <outlet property="winningAmount" destination="lIr-Ke-htF" id="5y3-K9-mHh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
